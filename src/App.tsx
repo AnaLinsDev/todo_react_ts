@@ -12,7 +12,6 @@ interface ITask {
   id: number;
   content: string;
   done: boolean;
-  updated: number;
 }
 
 function App() {
@@ -35,14 +34,12 @@ function App() {
       {
         id: maxId,
         content: newTask,
-        done: false,
-        updated: Date.now(),
+        done: false
       },
     ]
-      .sort((task) => task.updated)
-      .reverse();
 
     setTasks(newTasks);
+    setNewTask("");
   }
 
   function handleChangeNewTaskText(event: ChangeEvent<HTMLTextAreaElement>) {
