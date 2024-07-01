@@ -53,7 +53,7 @@
 /*__________________________________*/
 
 .taskListContent {
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   display: flex;
   align-items: center;
@@ -100,7 +100,6 @@
 
 .taskList > div {
   width: 100%;
-  text-align: center;
   margin-top: 4rem;
 
   display: flex;

@@ -3,9 +3,15 @@ import styles from "./App.module.css";
 import rocketLogo from "./assets/rocket_logo.svg";
 import listIcon from "./assets/list_icon.svg";
 
+import Task from "./components/Task";
+
 import { PlusCircle } from "@phosphor-icons/react";
+import { useState } from "react";
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const isListEmpty = tasks.length == 1;
+
   return (
     <>
       <div className={styles.app}>
@@ -26,16 +32,32 @@ function App() {
               Tarefas criadas <span>0</span>{" "}
             </span>
             <span>
-              Concluídas <span>0</span>
+              Concluídas <span>2 de 5</span>
             </span>
           </div>
 
-          <div className={styles.taskList}>
-            <div>
-              <img src={listIcon} alt="" />
-              <span>Você ainda não tem tarefas cadastradas</span>
-              <span>Crie tarefas e organize seus itens a fazer</span>
+          <div>
+          {isListEmpty ? (
+            <div className={styles.taskList}>
+              <div>
+                <img src={listIcon} alt="" />
+                <span>Você ainda não tem tarefas cadastradas</span>
+                <span>Crie tarefas e organize seus itens a fazer</span>
+              </div>
             </div>
+          ) : (
+            <div>
+              <Task />
+
+              <Task />
+
+              <Task />
+
+              <Task />
+
+              <Task />
+            </div>
+          )}
           </div>
         </div>
       </div>

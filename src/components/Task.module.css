@@ -1,0 +1,20 @@
+.task {
+  background-color: var(--gray-400);
+  height: 4.5rem;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.task:first-child {
+    margin-top: 1.5rem;
+}
+
+.radioCheck {
+  width: 1.09rem;
+  height: 1.09rem;
+}
