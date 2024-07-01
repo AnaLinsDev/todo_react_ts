@@ -1,20 +1,41 @@
 .task {
-  background-color: var(--gray-400);
+  background-color: var(--gray-500);
   height: 4.5rem;
+  width: 100%;
   border-radius: 8px;
   margin-top: 0.75rem;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
 }
 
-.task:first-child {
-    margin-top: 1.5rem;
+.taskChecked {
+  border: 0.25px solid var(--gray-400);
 }
 
-.radioCheck {
-  width: 1.09rem;
-  height: 1.09rem;
+
+.task > span {
+  max-width: calc(44rem - 6rem);
+  overflow-wrap: break-word;
+  color: var(--white);
+  font-weight: 200;
+}
+
+img {
+  cursor: pointer;
+  line-height: 0;
+}
+
+.checked {
+  text-decoration-line: line-through;
+  color: var(--gray-300) !important;
+}
+
+.trashIcon:hover {
+  cursor: pointer;
+  color: var(--red-500);
+  border-radius: 1px;
 }

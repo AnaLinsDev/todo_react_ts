@@ -1,3 +1,4 @@
+
 .app > header {
   background-color: var(--gray-700);
   height: 12rem;
@@ -25,12 +26,13 @@
   width: 39rem;
   height: 3.25rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: var(--gray-400);
+  color: var(--gray-100);
 }
 
 .inputContent > button {
-  width: 5rem;
+  width: 5.625rem;
   height: 3.25rem;
 
   border: 0;
@@ -53,16 +55,18 @@
 /*__________________________________*/
 
 .taskListContent {
-  margin-top: 4rem;
+  max-width: 100%;
+
+  width: 44rem;
+
+  margin: 4rem auto 0 auto;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
 .taskListContent > div {
-  width: 44rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -87,7 +91,7 @@
   border-radius: 8px;
 }
 
-.taskList {
+.taskListEmpty {
   border-top: 2px solid var(--gray-400);
   border-radius: 8px;
   height: calc(100vh - 25rem);
@@ -98,19 +102,40 @@
   justify-content: center;
 }
 
-.taskList > div {
+.taskListEmpty > div {
   width: 100%;
   margin-top: 4rem;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.taskList > div > img {
+.taskList {
+  width: 100%;
+  margin-top: 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.taskListEmpty > div > img {
   height: 3.5rem;
   margin-bottom: 1rem;
 }
 
-.taskList > div > span:nth-child(2) {
+.taskListEmpty > div > span:nth-child(3) {
   font-weight: 200;
+}
+
+/* _____________________ */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .inputContent {
+    flex-wrap: wrap;
+  }
 }
